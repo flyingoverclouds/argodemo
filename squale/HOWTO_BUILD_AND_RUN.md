@@ -5,10 +5,16 @@ docker build -t squale:latest .
 
 ## RUN 'squale' container locally
 ```sh
-docker run -p 8080:8007 --name aSqualeIsRunning squale
+docker run -p 8007:8007 --name aSqualeIsRunning squale
 ```
 
-Test locally by browsing to http://localhost:8080 ( you should see a nice picture of the squale computer )
+Test locally by browsing to http://localhost:8007 ( you should see a nice picture of the squale computer )
+
+you can specify a MOTD , by adding an environment variable MOTD
+```sh
+docker run -p 8007:8007 -e MOTD="8bits powered" squale
+```
+
 
 ## PUSH image to Azure Container Registry
 *Replace **YOUR_ACR_NAME_HERE** with your Azure Container Registry name*

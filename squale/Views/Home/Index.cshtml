@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Boot screen";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Apollo7 Squale</h1>
+    <p>
+        <img style="max-width: 680px" src="~/img/Squale_Apollo_7_pic_4.jpg" /><br />
+        <i style="font-size: smaller">source http://hxc2001.free.fr/Squale/index.html &aacute; AssociationMO5.com</i>
+    </p>
+    <p>
+        <table style="border-width: 0px;" align="center">
+            <tr><td class="text-right">Année de sortie : </td><td class="font-weight-bold text-left">1985</td></tr>
+            <tr><td class="text-right">Processeur : </td><td class="font-weight-bold text-left">EF 6809</td></tr>
+            <tr><td class="text-right">Vitesse : </td><td class="font-weight-bold text-left">1Mhz</td></tr>
+            <tr><td class="text-right">RAM : </td><td class="font-weight-bold text-left">92Ko</td></tr>
+            <tr><td class="text-right">Environnement : </td><td class="font-weight-bold text-left">SQMON</td></tr>
+            <tr><td class="text-right">Système disque : </td><td class="font-weight-bold text-left">DOS FLEX</td></tr>
+        </table>
+    </p>
+    <p>Mot du jour : @System.Environment.GetEnvironmentVariable("MOTD")</p>
+    <p>
+        <img style="max-width: 680px" src="~/img/squale-boot.png" /><br />
+        <i style="font-size: smaller">source https://mag.mo5.com/actu/73410/squale-le-micro-ordinateur-legendaire-refait-surface/</i>
+    </p>
+</div>

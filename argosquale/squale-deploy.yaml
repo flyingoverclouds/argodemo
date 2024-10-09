@@ -20,5 +20,5 @@ spec:
         - containerPort: 8007
         env:
           - name: MOTD
-            value: "8bits on k8s"
+            value: "8bits on k8s v2"
         

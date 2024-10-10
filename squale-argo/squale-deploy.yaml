@@ -4,7 +4,7 @@ metadata:
   name: squale-ui
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 0 
   selector:
     matchLabels:
       app: squale-ui
@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
       - name: squale-ui
-        image: acrargonc.azurecr.io/vintagecomputer/squale:v1
+        image: acrargonc.azurecr.io/vintagecomputer/squale:1.0.0
         ports:
         - containerPort: 8007
         env:
           - name: MOTD
-            value: "8bits BritishMuseuym"
+            value: "8bits ImageUpdater"
         

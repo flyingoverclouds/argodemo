@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: squale-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0 
+  selector:
+    matchLabels:
+      app: squale-ui
+  template:
+    metadata:
+      labels:
+        app: squale-ui
+    spec:
+      containers:
+      - name: squale-ui
+        image: acrargonc.azurecr.io/vintagecomputer/squale:1.0.0
+        ports:
+        - containerPort: 8007
+        env:
+          - name: MOTD
+            value: "8bits Kustomize"
+        

@@ -16,7 +16,7 @@ kubectl get all -n argocd
 ```
 
 ## HACK : Expose ArgoCD Dashboard on a public IP :
-WARNING : NOT SECURE  (NO SSL AND PUBLIC EXPOSURE) ! FOR TESTING PURPOSE ONLY
+__WARNING__ : NOT SECURE  (NO SSL AND PUBLIC EXPOSURE) ! FOR TESTING PURPOSE ONLY
 
 ### Convert ArgoCD Service to LoadBalancer type
 ```sh
@@ -69,9 +69,14 @@ argocd app list
 argocd app get guestbook
 ```
 
-## syncrhonisation des cluster (= deployer l'app la 1ere fois, mettre a jour les fois suivante)
+## Force app synchronisation. 
+
 ```sh
 argocd app sync guestbook
+```
+
+Check deployed artifacts
+```sh
 kubectl get all -n default
 ```
 

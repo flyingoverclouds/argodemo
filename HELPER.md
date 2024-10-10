@@ -87,8 +87,15 @@ argocd app sync squale
 ```
 
 ## Deploying the SQUALE Application using Kustomize
+Deploy registry config file (update it to match you registry name/secret!!)
+
 ```sh
-TODO
+kubectl apply -f ./argocd-imageupdater-registries.yaml -n argocd
+
+kubectl create secret generic argocd-image-updater-acr -n argocd --from-literal=acrcred=ACRUSERNAME:ACRPASSWORD
+
+#kubectl create secret generic argocd-image-updater-acr -n argocd --from-literal=username=admin  --from-literal=password='REPLACE-WITH-YOUR-PWD' 
+kubectl delete pod argocd-image-updater-REPLACE-WIT-POD-NAME -n argocd
 ```
 
 

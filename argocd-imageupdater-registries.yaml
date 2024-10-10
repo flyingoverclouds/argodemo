@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-image-updater-config
+data:
+  registries.conf: |
+    registries:
+    - name: Azure ACR
+      prefix: acrargonc.azurecr.io
+      api_url: https://acrargonc.azurecr.io
+      credentials: secret:argocd/argocd-image-updater-acr#acrcred
+      ping: yes
